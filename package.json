@@ -1,0 +1,18 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "Een bot voor discord server belgium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "author": "Nils",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "nodemon": "^2.0.6",
+    "opus": "0.0.0",
+    "ytdl-core": "^4.2.1"
+  }
+}
