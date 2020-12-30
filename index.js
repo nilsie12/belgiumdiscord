@@ -36,7 +36,7 @@ bot.on("ready", async () => {
 
     console.log(`${bot.user.username} is online`)
 
-    bot.user.setActivity("Belgium Roleplay", { type: "PLAYING" });
+    bot.user.setActivity("Brussel Roleplay", { type: "PLAYING" });
 
 });
 
