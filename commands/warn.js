@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
     // const args = message.content.slice(prefix.length).split(/ +/);
 
-    if (!message.member.hasPermission("BAN_USER")) return message.reply("sorry jij kan dit niet");
+    if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("sorry jij kan dit niet");
 
     if (!args[0]) return message.reply("Geen gebruiker opgegeven.");
 
