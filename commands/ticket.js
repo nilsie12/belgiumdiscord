@@ -60,7 +60,7 @@ module.exports.run = async (bot, message, args) => {
                     settedParent.send(embadParent);
                 }
             ).catch(err => {
-                message.channel.send("Er is een fout.");
+                message.channel.send("Er is een fout");
             });
         }
     ).catch(err => {
