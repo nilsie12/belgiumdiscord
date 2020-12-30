@@ -42,7 +42,7 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", member => {
 
-    var role = member.guild.roles.cache.get('748231190993043457');
+    var role = member.guild.roles.cache.get('764075893852733480');
 
     if (!role) return;
 
