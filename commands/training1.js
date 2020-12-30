@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
     var meldingEmbed = new discord.MessageEmbed()
         .setTitle("Training")
         .setColor("#000000")
-        .setDescription(`Type: ${options.Type} \n Tijd: ${options.tijd} \n Datum: ${options.datum} \n Co-Host: ${options.cohost} \n Opmerkingen: ${options.opmerkingen}`);
+        .setDescription(`Type: ${options.Type} \n\n Tijd: ${options.tijd} \n\n Datum: ${options.datum} \n\n Host: ${message.author} \n\n Co-Host: ${options.cohost} \n\n Opmerkingen: ${options.opmerkingen}`);
 
     var ideeChannel = message.member.guild.channels.cache.get("764580691370311710");
     if (!ideeChannel) return message.channel.send("Dit kanaal bestaat niet!"); 
