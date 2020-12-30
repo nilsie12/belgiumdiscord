@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     if (!bugChannel) return message.channel.send("Dit kanaal bestaat niet!");
 
     // Verzend het bericht en voeg er reacties aan toe.
-    ideeChannel.send(ideeEmbed).then(embedMessage => {
+    bugChannel.send(ideeEmbed).then(embedMessage => {
         embedMessage.react('👍');
         embedMessage.react('👎');
     });
