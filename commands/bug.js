@@ -3,21 +3,21 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
     // Vang het idee op.
-    var idee = args.join(" ");
+    var bug = args.join(" ");
 
     // Kijk na als er een idee is meegegeven.
-    if (!idee) return message.channel.send("Geen idee meegegeven, gelieve een idee mee te geven.");
+    if (!bug) return message.channel.send("Geen bug meegegeven, gelieve een bug mee te geven.");
 
     // Maak het embed aan.
     var ideeEmbed = new discord.MessageEmbed()
-        .setTitle("Nieuw Idee")
+        .setTitle("Nieuwe bug")
         .setColor("#00FF00")
-        .addField("Idee: ", idee)
+        .addField("Bug: ", bug)
         .addField("Ingezonden door: ", message.author);
 
     // Vind het kanaal.
-    var ideeChannel = message.member.guild.channels.cache.get("765240146076500029");
-    if (!ideeChannel) return message.channel.send("Dit kanaal bestaat niet!");
+    var bugChannel = message.member.guild.channels.cache.get("765240285122658304");
+    if (!bugChannel) return message.channel.send("Dit kanaal bestaat niet!");
 
     // Verzend het bericht en voeg er reacties aan toe.
     ideeChannel.send(ideeEmbed).then(embedMessage => {
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "idee",
-    description: "Heb je een idee? Zet het dan hier en misschien passen we het toe.",
+    name: "bug",
+    description: "Heb je een bug? Zeg het en meestal fixen we dat!",
     category: "Informatie"
 }

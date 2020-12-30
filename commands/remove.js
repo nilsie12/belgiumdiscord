@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-    var catergoryID = "789910252069584937";
+    var catergoryID = "765230622179328050";
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Jij kan dit niet doen!");
 
