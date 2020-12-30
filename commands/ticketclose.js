@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 
-    name: "close",
+    name: "tclose",
     description: "Close een ticket",
     category: "Staff Commands"
 
