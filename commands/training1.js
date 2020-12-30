@@ -18,6 +18,30 @@ module.exports.run = async (bot, message, args) => {
 
     }
 
+    var argsList = args.join(" ").split(scheiding);
+
+
+    var options = {
+
+        Type: argsList[0],
+        tijd: argsList[1],
+        datum: argsList[2],
+        cohost: argsList[3],
+        opmerkingen: argsList[4]
+
+
+    }
+
+    var meldingEmbed = new discord.MessageEmbed()
+        .setTitle("Training")
+        .setColor("#000000")
+        .setDescription(`Type: ${options.Type} \n Tijd: ${options.tijd} \n Datum: ${options.datum} \n Co-Host: ${options.cohost} \n Opmerkingen: ${options.opmerkingen}`);
+
+    var ideeChannel = message.member.guild.channels.cache.get("764580691370311710");
+    if (!ideeChannel) return message.channel.send("Dit kanaal bestaat niet!"); 
+
+    ideeChannel.send(meldingEmbed);
+
 }
 
 module.exports.help = {
