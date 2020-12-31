@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
                         VIEW_CHANNEL: false
                     });
 
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Staff'), {
+                    settedParent.updateOverwrite(message.guild.rolesID.cache.find(x => x.id === '764076021346598923'), {
                         CREATE_INSTANT_INVITE: false,
                         READ_MESSAGES: true,
                         ATTACH_FILES: true,
