@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#00BFFF")
         .setFooter("Kanaal wordt aangemaakt.")
 
-    message.channel.send(embed).then(msg => msg.delete({ timeout: 3000 }));
+    message.channel.send(embed).then(msg => msg.delete({ timeout: 8000 }));
 
     message.guild.channels.create(channelName, { type: 'text' }).then(
         (createdChannel) => {
